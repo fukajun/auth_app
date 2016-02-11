@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resource :user, only: [:new]
   get 'sessions/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
