@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'identities/new'
+
+  match "/auth/:provider/callback", to: "sessions#create", via: [:get, :post]
   resource :user, only: [:new]
   get 'sessions/new'
 
