@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160211124844) do
+ActiveRecord::Schema.define(version: 20160220151505) do
+
+  create_table "authentications", force: :cascade do |t|
+    t.integer  "user_id",       null: false
+    t.string   "provider",      null: false
+    t.string   "uid",           null: false
+    t.string   "access_token",  null: false
+    t.string   "refresh_token"
+    t.string   "secret"
+    t.string   "screen_name",   null: false
+    t.string   "name",          null: false
+    t.string   "email"
+    t.string   "image_url"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id"
