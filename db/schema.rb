@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20160220151505) do
     t.integer  "user_id",       null: false
     t.string   "provider",      null: false
     t.string   "uid",           null: false
-    t.string   "access_token",  null: false
+    t.string   "access_token"
     t.string   "refresh_token"
     t.string   "secret"
-    t.string   "screen_name",   null: false
-    t.string   "name",          null: false
+    t.string   "screen_name"
+    t.string   "name"
     t.string   "email"
     t.string   "image_url"
     t.datetime "created_at",    null: false
