@@ -16,7 +16,6 @@ class User < ActiveRecord::Base
       user = nil
       User.transaction do
         user = User.create!(user_params(auth))
-        binding.pry
         user.authentications.create!(auth_params(auth))
       end
       user
