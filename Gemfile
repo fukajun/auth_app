@@ -15,6 +15,7 @@ gem 'omniauth-identity'
 gem 'slim-rails'
 
 group :development, :test do
+  gem 'pry'
   gem 'byebug'
 end
 
