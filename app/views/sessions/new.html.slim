@@ -1,6 +1,7 @@
 h1 Sessions#new
 
-= link_to 'Signin', '/auth/identity'
+= flash[:notice]
+
 = form_tag "/auth/identity/callback" do
   .field
     = label_tag :auth_key, "Email"

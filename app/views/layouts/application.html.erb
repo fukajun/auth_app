@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <% if current_user %>
+    <%= "#{current_user.name} さん" if current_user %>
+    <%= link_to 'signout', session_path(id: current_user), method: :delete %>
+    <% else %>
+    <%= link_to 'signin', new_session_path %>
+    <%= link_to 'signup', new_user_path %>
+    <% end %>
+  </header>
 
 <%= yield %>
 

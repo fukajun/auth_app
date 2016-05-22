@@ -1,5 +1,7 @@
 h1 Signup
 
+= flash[:error]
+
 = form_tag '/auth/identity/register' do
   .field
     = label 'email', :email
