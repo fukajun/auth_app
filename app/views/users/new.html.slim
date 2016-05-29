@@ -4,18 +4,18 @@ h1 Signup
 
 = form_tag '/auth/identity/register' do
   .row
-    .field.col.xs-6
+    .field.col.md-6
       = label 'email', :email
       = text_field_tag :email, '', class: 'form-control'
   .row
-    .field.col.xs-6
+    .field.col.md-6
       = label 'email', :password
       = password_field_tag :password, '', class: 'form-control'
   .row
-    .field.col.xs-6
+    .field.col.md-6
       = label 'email(confirm)', :password_confirmation
       = password_field_tag :password_confirmation, '', class: 'form-control'
   .row
-    .field.col.xs-6
+    .field.col.md-6
       = submit_tag 'Save changes', class: 'btn'
 
