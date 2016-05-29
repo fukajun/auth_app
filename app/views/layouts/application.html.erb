@@ -8,6 +8,7 @@
 </head>
 <body>
   <header>
+    <div class='container'>
     <% if current_user %>
     <%= "#{current_user.name} さん" if current_user %>
     <%= link_to 'signout', session_path(id: current_user), method: :delete %>
@@ -15,9 +16,12 @@
     <%= link_to 'signin', new_session_path %>
     <%= link_to 'signup', new_user_path %>
     <% end %>
+    </div>
   </header>
 
-<%= yield %>
+  <div class='container'>
+  <%= yield %>
+  </div>
 
 </body>
 </html>
