@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/fukajun/skyblue_rails.git
+  revision: 99f59a557274e1308337b5f74f0ada55ac22db59
+  branch: fix-prepend-assets-path
+  specs:
+    skyblue_rails (1.0.0)
+      rails (>= 3.1)
+      sass-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -226,6 +235,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  skyblue_rails!
   slim-rails
   spring
   sqlite3

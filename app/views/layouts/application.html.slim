@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title AuthApp
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width"
+  body
+    header
+      .container.nav
+        .row
+          - if current_user
+            .col.offset-sm-8
+              span.icon-home
+              = "#{current_user.name} さん"
+              span.icon-home
+              = link_to 'signout', session_path(id: current_user), method: :delete
+          - else
+            .col.offset-sm-8
+              span.icon-home
+              = link_to 'signin', new_session_path
+              span.icon-home
+              = link_to 'signup', new_user_path
+
+    .container
+      = yield
+  </html>
