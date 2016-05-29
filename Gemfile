@@ -15,6 +15,10 @@ gem 'omniauth-identity'
 gem 'slim-rails'
 
 group :development, :test do
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_rewinder'
+  gem 'launchy'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'tapp'
