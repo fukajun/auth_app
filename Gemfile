@@ -14,6 +14,9 @@ gem 'omniauth'
 gem 'omniauth-identity'
 gem 'slim-rails'
 
+# CSS
+gem 'skyblue_rails'
+
 group :development, :test do
   gem 'capybara'
   gem 'capybara-webkit'
