@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  root 'home#show'
+  get 'identities/new'
+  get 'auth/failure', to: 'sessions#failure'
+
+  match "/auth/:provider/callback", to: "sessions#create", via: [:get, :post]
+  resource :user, only: [:new]
+  resources :sessions, only: [:new, :destroy]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
