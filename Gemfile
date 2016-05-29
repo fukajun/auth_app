@@ -15,7 +15,7 @@ gem 'omniauth-identity'
 gem 'slim-rails'
 
 # CSS
-gem 'skyblue_rails'
+gem 'skyblue_rails', git: 'https://github.com/fukajun/skyblue_rails.git', branch: 'fix-prepend-assets-path'
 
 group :development, :test do
   gem 'capybara'
