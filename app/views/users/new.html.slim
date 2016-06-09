@@ -1,8 +1,10 @@
 h1 Signup
 
-= flash[:error]
+- @identity.errors.full_messages.each do |message|
+  ul
+     qi= message
 
-= form_tag '/auth/identity/register' do
+= form_for @identity, url: '/auth/identity/register' do
   .row
     .field.col.md-6
       = label 'email', :email
